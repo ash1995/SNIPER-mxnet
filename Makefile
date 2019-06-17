@@ -79,7 +79,7 @@ include $(DMLC_CORE)/make/dmlc.mk
 
 # all tge possible warning tread
 WARNFLAGS= -Wall -Wsign-compare
-CFLAGS = -DMSHADOW_FORCE_STREAM $(WARNFLAGS)
+CFLAGS = -DMSHADOW_FORCE_STREAM $(WARNFLAGS) -DMSHADOW_USE_F16C=0
 
 ifeq ($(DEV), 1)
 	CFLAGS += -g -Werror
